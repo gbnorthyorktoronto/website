@@ -52,6 +52,7 @@ export default function Home() {
         sizes="100vw"
         style={{
           height: backgroundHeight,
+          width: 'auto',
           position: 'absolute',
           left: -150,
           zIndex: -1,
@@ -67,6 +68,7 @@ export default function Home() {
         className="hidden sm:block"
         style={{
           height: backgroundHeight,
+          width: 'auto',
           position: 'absolute',
           zIndex: -2,
         }}
@@ -80,6 +82,7 @@ export default function Home() {
         className="sm:hidden"
         style={{
           zIndex: -2,
+          height: 'auto',
           width: '100%',
         }}
         width={1000}
