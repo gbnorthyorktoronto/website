@@ -1,5 +1,5 @@
 import { Menu } from "@mui/icons-material"
-import { Collapse, Dialog, Divider, List, ListItem, ListItemButton, ListItemText, styled } from "@mui/material"
+import { Box, Collapse, Dialog, Divider, List, ListItem, ListItemButton, ListItemText, styled } from "@mui/material"
 
 import { MainMenu, MainMenuItem, MainSecondaryItem, menuOptions } from '../constants'
 import { useRouter } from "next/navigation"
@@ -58,7 +58,7 @@ const MenuOptions = () => {
           const open = !!(itemPathnameOpened === mainOption.pathname && mainOption?.options)
 
           return (
-            <>
+            <Box key={mainOption.pathname}>
               <ListItem key={mainOption.pathname} disablePadding>
                 <ListItemButton onClick={() => onClick(mainOption)}>
                   <ListItemText primary={mainOption.label} />
@@ -68,18 +68,18 @@ const MenuOptions = () => {
                 <List component="div" disablePadding>
                   {secondaryMenu.map((secOpt) => {
                     return (
-                      <>
+                      <Box key={secOpt.pathname}>
                         <ListItemButton onClick={() => openSecondaryOption(secOpt.pathname)}>
                           <ListItemText key={secOpt.pathname} primary={secOpt.label} />
                         </ListItemButton>
                         {!secOpt.last && <Divider key={secOpt.pathname} />}
-                      </>
+                      </Box>
                     )
                   })}
                 </List>
               </Collapse>
               {!mainOption.last && <Divider key={mainOption.pathname} />}
-            </>
+            </Box>
           )
         })}
       </List>

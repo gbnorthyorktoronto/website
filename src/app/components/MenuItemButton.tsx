@@ -1,6 +1,6 @@
-import { Button as ButtonMui, ButtonProps, styled } from "@mui/material"
+import { Box, Button as ButtonMui, ButtonProps, styled } from "@mui/material"
 import classNames from "classnames"
-import { MouseEvent, ReactNode, useState } from "react"
+import { MouseEvent, useState } from "react"
 import Popover from "./Popover"
 
 const Button = styled(ButtonMui)(({ theme }) => ({
@@ -39,7 +39,7 @@ const MenuItemButton = ({ children, selected, pathname, ...props }: ComponentPro
   const popoverOptions = ['/our-school', '/our-programs']
 
   return (
-    <>
+    <Box key={pathname}>
       <Button
         key={pathname}
         {...props}
@@ -50,7 +50,7 @@ const MenuItemButton = ({ children, selected, pathname, ...props }: ComponentPro
       </Button>
       {popoverOptions.includes(pathname) &&
         <Popover pathname={pathname} anchorEl={anchorEl} open={open} handleMenuClose={handleMenuClose} />}
-    </>
+    </Box>
   )
 }
 

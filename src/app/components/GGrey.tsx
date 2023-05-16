@@ -12,6 +12,7 @@ const GGrey = () => {
       sizes="100vw"
       style={{
         height: backgroundHeight,
+        width: 'auto',
         position: 'absolute',
         left: -140,
         zIndex: -1,

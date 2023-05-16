@@ -86,16 +86,16 @@ const MenuOptions = ({ handleMenuClose, pathname }: { handleMenuClose: () => voi
       onMouseLeave={() => handleMenuClose()}
     >
       <List>
-        {options?.map((o, index) => {
+        {options?.map((o) => {
           return (
-            <>
-              <ListItem key={`${index}-${o.pathname}`} disablePadding>
+            <Box key={o.pathname}>
+              <ListItem key={o.pathname} disablePadding>
                 <ListItemButton onClick={() => onClick(o.pathname)}>
                   <ListItemText primary={o.label} />
                 </ListItemButton>
               </ListItem>
-              {!o.last && <Divider key={`${index}-${o.pathname}`} />}
-            </>
+              {!o.last && <Divider key={o.pathname} />}
+            </Box>
           )
         })}
       </List>

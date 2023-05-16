@@ -25,6 +25,7 @@ const Logo = () => {
         src={logo.src}
         alt="Gracie Barra Logo"
         fill={true}
+        sizes='(max-width: 195px)'
       />
     </Button>
   )
