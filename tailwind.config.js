@@ -1,5 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge: {
+    content: ["./src/app/**/*.tsx",],
+    // These options are passed through directly to PurgeCSS
+  },
+
   corePlugins: {
     preflight: false,
   },
