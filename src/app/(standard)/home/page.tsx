@@ -96,7 +96,7 @@ export default function Home() {
         className="sm:hidden"
       />
       <GettingStarted
-        className="mt-[20px] sm:mt-0 sm:absolute sm:top-[400px] sm:left-[650px] text-[30px] sm:text-[50px] w-[300px] sm:w-[500px] text-center sm:text-end"
+        className="mt-[20px] sm:mt-0 sm:absolute sm:top-[400px] sm:left-[650px] !text-3xl sm:!text-5xl w-[300px] sm:w-[500px] text-center sm:text-end"
       >
         Getting started at Gracie Barra is easy
       </GettingStarted>

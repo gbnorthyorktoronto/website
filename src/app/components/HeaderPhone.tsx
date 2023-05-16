@@ -4,7 +4,6 @@ import { Phone as PhoneMui } from '@mui/icons-material'
 const Container = styled(Typography)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  // color: theme.palette.common.white,
   fontSize: 24,
   fontWeight: 600,
 }))
