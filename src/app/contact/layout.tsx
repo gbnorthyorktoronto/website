@@ -27,7 +27,7 @@ export default function ContactLayout({ children } : { children: ReactNode }) {
       <Page>
         <Logo />
         <HeaderInfo>
-          <Box display="flex" />
+          {/* <Box display="flex" /> */}
         </HeaderInfo>
         <Header>
           <HeaderMenu />

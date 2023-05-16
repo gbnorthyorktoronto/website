@@ -43,7 +43,7 @@ const HeaderMenu = ({ ...props }) => {
   ]
 
   return (
-    <Box>
+    <Box {...props}>
       {options.map((o) => {
         const selected = pathname.includes(o.pathname)
 
@@ -58,7 +58,6 @@ const HeaderMenu = ({ ...props }) => {
             onClick={onClick}
             selected={selected}
             key={o.label}
-            {...props}
             pathname={o.pathname}
           >
             {o.label}

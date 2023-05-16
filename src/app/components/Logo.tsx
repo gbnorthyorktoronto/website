@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 const Button = styled(ButtonMui)(() => ({
   position: 'absolute',
-  left: 80,
   zIndex: 1,
 }))
 
@@ -18,12 +17,14 @@ const Logo = () => {
   }
 
   return (
-    <Button onClick={onClick}>
+    <Button
+      className="h-[165px] sm:h-[200px] w-[160px] sm:w-[195px] left-0 right-0 top-[75px] m-auto sm:left-[80px] sm:m-0 sm:top-[20px]"
+      onClick={onClick}
+    >
       <Image
         src={logo.src}
         alt="Gracie Barra Logo"
-        width={195}
-        height={200}
+        fill={true}
       />
     </Button>
   )

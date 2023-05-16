@@ -2,18 +2,15 @@ import { Box, styled } from "@mui/material"
 import { ReactNode } from "react"
 
 const Container = styled(Box)(({ theme }) => ({
-  alignItems: 'center',
   display: 'flex',
   backgroundColor: theme.palette.common.white,
   width: '100%',
-  height: 60,
-  paddingLeft: 350,
-  paddingRight: 60,
-  justifyContent: 'space-between',
 }))
 
 const HeaderInfo = ({ children }: { children: ReactNode }) => (
-  <Container>{children}</Container>
+  <Container
+    className="justify-center sm:items-center sm:justify-between sm:pl-[350px] sm:pr-[60px] h-[110px] sm:h-[80px]"
+  >{children}</Container>
 )
 
 export default HeaderInfo

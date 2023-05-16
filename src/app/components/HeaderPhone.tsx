@@ -4,7 +4,7 @@ import { Phone as PhoneMui } from '@mui/icons-material'
 const Container = styled(Typography)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  color: theme.palette.common.white,
+  // color: theme.palette.common.white,
   fontSize: 24,
   fontWeight: 600,
 }))
@@ -15,8 +15,8 @@ const Phone = styled(PhoneMui)(() => ({
   marginRight: 10,
 }))
 
-const HeaderPhone = () => (
-  <Container><Phone />(416) 782-8255</Container>
+const HeaderPhone = ({ ...props }) => (
+  <Container {...props}><Phone />(416) 782-8255</Container>
 )
 
 export default HeaderPhone

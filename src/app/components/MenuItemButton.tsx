@@ -5,7 +5,6 @@ import Popover from "./Popover"
 
 const Button = styled(ButtonMui)(({ theme }) => ({
   color: theme.palette.common.white,
-  fontSize: 18,
   fontWeight: 600,
   textTransform: 'none',
   borderRadius: 50,
@@ -44,7 +43,7 @@ const MenuItemButton = ({ children, selected, pathname, ...props }: ComponentPro
       <Button
         key={pathname}
         {...props}
-        className={classNames({ selected })}
+        className={classNames({ selected }, "text-[15px] 2xl:text-[18px]")}
         onMouseEnter={(e) => handleMenuOpen(e)}
       >
         {children}

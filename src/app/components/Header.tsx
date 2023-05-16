@@ -5,7 +5,6 @@ const Container = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   backgroundColor: theme.palette.primary.main,
   display: 'flex',
-  height: 80,
   justifyContent: 'space-between',
   paddingLeft: 330,
   paddingRight: 80,
@@ -13,7 +12,9 @@ const Container = styled(Box)(({ theme }) => ({
 }))
 
 const Header = ({ children }: { children: ReactNode }) => (
-  <Container>{children}</Container>
+  <Container
+    className="h-[90px] sm:h-20"
+  >{children}</Container>
 )
 
 export default Header

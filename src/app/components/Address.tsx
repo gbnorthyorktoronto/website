@@ -6,7 +6,6 @@ const Text = styled(Typography)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   color: theme.palette.common.black,
-  fontSize: 18,
   fontWeight: 600,
 }));
 
@@ -23,10 +22,18 @@ const Location = styled(Place)(() => ({
 }));
 
 const Address = () => {
+  const fontSize = 'text-[16px] sm:fontSize-[18px]'
+  const hidden = 'hidden sm:block'
+  const margin = 'mr-0 sm:mr-[40px]'
+
   return (
-    <Box display="flex">
-      <Text mr={5}><Location />{gbInfo.address}</Text>
-      <Text><Mail />{gbInfo.email}</Text>
+    <Box
+      display="flex"
+      className="flex-col sm:flex-row mt-[20px] sm:mt-0"
+      alignItems="center"
+    >
+      <Text className={`${fontSize} ${margin}`}><Location className={hidden} />{gbInfo.address}</Text>
+      <Text className={`${fontSize} ${margin}`}><Mail className={hidden} />{gbInfo.email}</Text>
     </Box>
   )
 }

@@ -1,15 +1,15 @@
 import { Menu } from "@mui/icons-material"
 import { Divider, List, ListItem, ListItemButton, ListItemText, styled } from "@mui/material"
-import { ReactNode } from "react"
 
 import { MainMenu, menuOptions as menuOptionsConst } from '../constants'
 import { useRouter } from "next/navigation"
 
-const Icon = styled(Menu)(() => ({
+const Icon = styled(Menu)(({ theme }) => ({
   height: 50,
   width: 50,
-  padding: 15,
-  borderRadius: 15,
+  marginLeft: 10,
+  marginTop: 10,
+  color: theme.palette.primary.main
 }))
 
 const MenuOptions = () => {
@@ -42,7 +42,7 @@ const MenuOptions = () => {
 
 const MenuMobile = () => {
   return (
-    <Icon />
+    <Icon className="sm:hidden" />
   )
 }
 

@@ -25,7 +25,7 @@ const Button = styled(ButtonMui)(({ theme }) => ({
   }
 }));
 
-const TryButton = ({ size = 'sm' }: { size?: 'sm' | 'xs' }) => {
+const TryButton = ({ size = 'sm', ...props }: { size?: 'sm' | 'xs' }) => {
   const router = useRouter()
 
   const onClick = () => {
@@ -33,7 +33,11 @@ const TryButton = ({ size = 'sm' }: { size?: 'sm' | 'xs' }) => {
   }
 
   return (
-    <Button onClick={onClick} className={classNames({ [size]: size })}>Try a Free Class today</Button>
+    <Button
+      onClick={onClick}
+      className={classNames({ [size]: size })}
+      {...props}
+    >Try a Free Class today</Button>
   )
 }
 

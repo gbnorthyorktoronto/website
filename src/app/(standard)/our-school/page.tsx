@@ -18,7 +18,7 @@ import classRoom5 from '../../images/image-list/class-room5.jpeg'
 import fightClass from '../../images/image-list/fight-class.jpeg'
 import medals1 from '../../images/image-list/medals1.jpeg'
 import medals2 from '../../images/image-list/medals2.jpeg'
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 
 const itemData = [
   {
@@ -70,6 +70,7 @@ const itemData = [
 const Container = styled(Box)(() => ({
   height: backgroundHeight,
   width: '100%',
+  maxWidth: 1440,
   overflowX: 'hidden',
   overflowY: 'scroll',
   paddingInline: 80,
