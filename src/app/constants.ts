@@ -7,13 +7,13 @@ export const gbInfo = {
   phone: '(416) 782-8255',
 }
 
-interface MainSecondaryItem {
+export interface MainSecondaryItem {
   pathname: string
   label: string
   last: boolean
 }
 
-interface MainMenuItem {
+export interface MainMenuItem {
   pathname: string
   label: string
   shouldPush: boolean

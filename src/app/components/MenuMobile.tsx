@@ -1,8 +1,11 @@
 import { Menu } from "@mui/icons-material"
-import { Divider, List, ListItem, ListItemButton, ListItemText, styled } from "@mui/material"
+import { Collapse, Dialog, Divider, List, ListItem, ListItemButton, ListItemText, styled } from "@mui/material"
 
-import { MainMenu, menuOptions as menuOptionsConst } from '../constants'
+import { MainMenu, MainMenuItem, MainSecondaryItem, menuOptions } from '../constants'
 import { useRouter } from "next/navigation"
+import { useState } from "react"
+import { useSetMenuMobileState } from "../state/menu-mobile"
+import { useMenuMobileState } from "../state/menu-mobile"
 
 const Icon = styled(Menu)(({ theme }) => ({
   height: 50,
@@ -13,36 +16,89 @@ const Icon = styled(Menu)(({ theme }) => ({
 }))
 
 const MenuOptions = () => {
-  const options = Object.keys(menuOptionsConst)
-  const menuOptions:MainMenu = menuOptionsConst
+  const isMenuOpen = useMenuMobileState()
+  const setMenuMobileState = useSetMenuMobileState()
+  const [itemPathnameOpened, setItemPathnameOpened] = useState('')
+  const [secondaryMenu, setSecondaryMenu] = useState<MainSecondaryItem[]>([])
+
+  const mainOptions = Object.keys(menuOptions)
+
   const router = useRouter()
 
-  const onClick = (pathname: string) => {
+  const openSecondaryOption = (pathname: string) => {
+    handleCloseMenu()
     router.push(pathname)
   }
 
+  const onClick = (mainOption: MainMenuItem) => {
+    if (!mainOption?.options) {
+      handleCloseMenu()
+      router.push(mainOption.pathname)
+      return
+    }
+
+    if (itemPathnameOpened === mainOption.pathname) {
+      setItemPathnameOpened('')
+      return
+    }
+
+    setItemPathnameOpened(mainOption.pathname)
+    setSecondaryMenu(mainOption.options)
+  }
+
+  const handleCloseMenu = () => {
+    setMenuMobileState(false)
+  }
+
   return (
-    <List>
-      {options?.map((o) => {
-        const opt = menuOptions[o as keyof MainMenu]
-        return (
-          <>
-            <ListItem key={opt.pathname} disablePadding>
-              <ListItemButton onClick={() => onClick(opt.pathname)}>
-                <ListItemText primary={opt.label} />
-              </ListItemButton>
-            </ListItem>
-            {!opt.last && <Divider key={opt.pathname} />}
-          </>
-        )
-      })}
-    </List>
+    <Dialog open={isMenuOpen} onClose={handleCloseMenu} fullWidth>
+      <List>
+        {mainOptions?.map((opt) => {
+          const mainOption = menuOptions[opt as keyof MainMenu]
+          const open = !!(itemPathnameOpened === mainOption.pathname && mainOption?.options)
+
+          return (
+            <>
+              <ListItem key={mainOption.pathname} disablePadding>
+                <ListItemButton onClick={() => onClick(mainOption)}>
+                  <ListItemText primary={mainOption.label} />
+                </ListItemButton>
+              </ListItem>
+              <Collapse sx={{ marginInline: 3 }} in={open} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                  {secondaryMenu.map((secOpt) => {
+                    return (
+                      <>
+                        <ListItemButton onClick={() => openSecondaryOption(secOpt.pathname)}>
+                          <ListItemText key={secOpt.pathname} primary={secOpt.label} />
+                        </ListItemButton>
+                        {!secOpt.last && <Divider key={secOpt.pathname} />}
+                      </>
+                    )
+                  })}
+                </List>
+              </Collapse>
+              {!mainOption.last && <Divider key={mainOption.pathname} />}
+            </>
+          )
+        })}
+      </List>
+    </Dialog>
   )
 }
 
 const MenuMobile = () => {
+  const setMenuMobileState = useSetMenuMobileState()
+
+  const handleClickMenu = () => {
+    setMenuMobileState(true)
+  }
+
   return (
-    <Icon className="sm:hidden" />
+    <>
+      <MenuOptions />
+      <Icon onClick={handleClickMenu} className="sm:hidden" />
+    </>
   )
 }
 

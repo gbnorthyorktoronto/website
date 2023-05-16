@@ -18,7 +18,6 @@ import MenuMobile from '../components/MenuMobile'
 const Page = styled(Box)(() => ({
   display: 'flex',
   justifyContent: 'center',
-  // alignItems: 'space-between',
   flexDirection: 'column',
   overflow: 'hidden',
   width: '100%',
