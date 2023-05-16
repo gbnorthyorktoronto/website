@@ -88,13 +88,13 @@ const MenuOptions = ({ handleMenuClose, pathname }: { handleMenuClose: () => voi
       <List>
         {options?.map((o) => {
           return (
-            <Box key={o.pathname}>
-              <ListItem key={o.pathname} disablePadding>
+            <Box key={`${o.pathname}`}>
+              <ListItem disablePadding>
                 <ListItemButton onClick={() => onClick(o.pathname)}>
                   <ListItemText primary={o.label} />
                 </ListItemButton>
               </ListItem>
-              {!o.last && <Divider key={o.pathname} />}
+              {!o.last && <Divider />}
             </Box>
           )
         })}
@@ -113,7 +113,6 @@ interface PopoverProps {
 const Popover = ({ anchorEl, open, handleMenuClose, pathname }: PopoverProps) => {
   return (
     <PopoverMui
-      key={pathname}
       anchorEl={anchorEl}
       open={open}
       onClose={handleMenuClose}

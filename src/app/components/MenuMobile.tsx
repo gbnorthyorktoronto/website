@@ -58,8 +58,8 @@ const MenuOptions = () => {
           const open = !!(itemPathnameOpened === mainOption.pathname && mainOption?.options)
 
           return (
-            <Box key={mainOption.pathname}>
-              <ListItem key={mainOption.pathname} disablePadding>
+            <Box key={`${mainOption.pathname}-${mainOption.label}`}>
+              <ListItem disablePadding>
                 <ListItemButton onClick={() => onClick(mainOption)}>
                   <ListItemText primary={mainOption.label} />
                 </ListItemButton>
@@ -68,17 +68,17 @@ const MenuOptions = () => {
                 <List component="div" disablePadding>
                   {secondaryMenu.map((secOpt) => {
                     return (
-                      <Box key={secOpt.pathname}>
+                      <Box key={`${secOpt.pathname}-${secOpt.label}-${secOpt.last}`}>
                         <ListItemButton onClick={() => openSecondaryOption(secOpt.pathname)}>
-                          <ListItemText key={secOpt.pathname} primary={secOpt.label} />
+                          <ListItemText primary={secOpt.label} />
                         </ListItemButton>
-                        {!secOpt.last && <Divider key={secOpt.pathname} />}
+                        {!secOpt.last && <Divider />}
                       </Box>
                     )
                   })}
                 </List>
               </Collapse>
-              {!mainOption.last && <Divider key={mainOption.pathname} />}
+              {!mainOption.last && <Divider key={`${mainOption.pathname}`} />}
             </Box>
           )
         })}
