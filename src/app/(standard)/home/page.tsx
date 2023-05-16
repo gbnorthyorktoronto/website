@@ -59,10 +59,10 @@ export default function Home() {
         }}
       />
       <Slogan1
-        className="left-[60px] sm:left-[380px] top-[90px] sm:top-[50px] text-[30px] sm:text-[50px]"
+        className="left-[60px] sm:left-[380px] top-[90px] sm:top-[50px] !text-[30px] sm:!text-[50px]"
       >Jiu-Jitsu for</Slogan1>
       <Slogan2
-        className="left-[30px] sm:left-[450px] top-[135px] sm:top-[120px] text-[40px] sm:text-[80px]"
+        className="left-[30px] sm:left-[450px] top-[135px] sm:top-[120px] !text-[40px] sm:!text-[80px]"
       >Everyone</Slogan2>
       <Image
         className="hidden sm:block"
@@ -93,10 +93,10 @@ export default function Home() {
       <HeaderPhone
         marginTop={4}
         sx={{ color: theme.palette.primary.main }}
-        className="sm:hidden"
+        className="sm:!hidden"
       />
       <GettingStarted
-        className="mt-[20px] sm:mt-0 sm:absolute sm:top-[400px] sm:left-[650px] !text-3xl sm:!text-5xl w-[300px] sm:w-[500px] text-center sm:text-end"
+        className="!mt-[20px] sm:mt-0 sm:absolute sm:top-[370px] sm:left-[650px] !text-[30px] sm:!text-[50px] w-[300px] sm:w-[500px] text-center sm:text-end"
       >
         Getting started at Gracie Barra is easy
       </GettingStarted>

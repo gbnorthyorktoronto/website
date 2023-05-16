@@ -22,9 +22,9 @@ const Location = styled(Place)(() => ({
 }));
 
 const Address = () => {
-  const fontSize = 'text-[16px] sm:fontSize-[18px]'
-  const hidden = 'hidden sm:block'
-  const margin = 'mr-0 sm:mr-[40px]'
+  const fontSize = '!text-[16px] sm:!fontSize-[18px]'
+  const hidden = '!hidden sm:!block'
+  const margin = '!mr-0 sm:!mr-[40px]'
 
   return (
     <Box

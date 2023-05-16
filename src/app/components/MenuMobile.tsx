@@ -95,10 +95,10 @@ const MenuMobile = () => {
   }
 
   return (
-    <>
+    <Box className="sm:hidden">
       <MenuOptions />
       <Icon onClick={handleClickMenu} className="sm:hidden" />
-    </>
+    </Box>
   )
 }
 

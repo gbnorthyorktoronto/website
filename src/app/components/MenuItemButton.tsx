@@ -43,7 +43,7 @@ const MenuItemButton = ({ children, selected, pathname, ...props }: ComponentPro
       <Button
         key={pathname}
         {...props}
-        className={classNames({ selected }, "text-[15px] 2xl:text-[18px]")}
+        className={classNames({ selected }, "!text-[15px] 2xl:!text-[18px]")}
         onMouseEnter={(e) => handleMenuOpen(e)}
       >
         {children}

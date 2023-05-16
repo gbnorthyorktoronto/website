@@ -43,7 +43,7 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
           <HeaderMenu className="hidden sm:flex" />
           <HeaderPhone
             sx={{ color: theme.palette.common.white }}
-            className="hidden sm:flex"
+            className="!hidden sm:flex"
           />
         </Header>
         <MenuMobile />
