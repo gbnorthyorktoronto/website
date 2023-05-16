@@ -2,9 +2,6 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    serverActions: true, // TODO: remove when finish
-  },
   async redirects() {
     return [
       {
