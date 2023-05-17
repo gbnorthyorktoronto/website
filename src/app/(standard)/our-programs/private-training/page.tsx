@@ -15,10 +15,24 @@ export default function PrivateTraining() {
       className="px-0 sm:px-[80px]"
     >
       <GGrey />
-      <Box display="flex" width="100%" justifyContent="space-between">
-        <Box>
-          <Title mt={20}>Private Training</Title>
-          <BodyText width={700} mt={3.5}>
+      <Box
+        className="flex-col sm:flex-row items-center sm:items-start"
+        display="flex"
+        width="100%"
+        justifyContent="space-between"
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          className="items-center sm:items-start"
+        >
+          <Title
+            className="mt-[25px] sm:!mt-[160px] items-center sm:items-start"
+          >Private Training</Title>
+          <BodyText
+            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            mt={3.5}
+          >
             Private Jiu-Jitsu lessons in North York, CA strengthen your skills and help you hone specific techniques
             that you learned in class. Private lessons are a great way to gain an edge over the competition and
             advance your abilities on a faster timeline than your peers. Your journey in Jiu-Jitsu is unique and
@@ -33,9 +47,11 @@ export default function PrivateTraining() {
           </BodyText>
         </Box>
         <Image
-          width={628}
-          height={678}
+          className="w-11/12 sm:w-[628px]"
+          width={1000}
+          height={1000}
           style={{
+            height: 'auto',
             marginTop: 50,
           }}
           src={PrivateTrainingPhoto.src}
@@ -44,7 +60,13 @@ export default function PrivateTraining() {
       </Box>
 
       <Box display="flex" flexDirection="column" mt={8} mb={10} alignItems="center">
-        <Box mt={10} display="flex" width={1450} height={450} flexWrap="wrap" justifyContent="space-between" alignItems="space-between">
+        <Box
+          className="w-11/12 sm:w-[1450px] sm:h-[450px] justify-center sm:justify-between"
+          mt={10}
+          display="flex"
+          flexWrap="wrap"
+          alignItems="space-between"
+        >
           <Techniques>Learn at your own pace</Techniques>
           <Techniques>Review technique with a trained instructor</Techniques>
           <Techniques>Improve focus and confidence on the mat</Techniques>
@@ -52,7 +74,11 @@ export default function PrivateTraining() {
           <Techniques>One-on-one attention to ensure you&apos;re getting the most out of your training</Techniques>
           <Techniques>Results tailored to your individual goals and abilities</Techniques>
         </Box>
-        <BodyText width={870} textAlign="center" mt={8.75}>
+        <BodyText
+          className="w-11/12 sm:w-[870px]"
+          textAlign="center"
+          mt={8.75}
+        >
           Private lessons in Jiu-Jitsu can lessons can help you gain a deeper understanding of the art and take your
           training to the next level. This is the preferred method of training for many of our champions who
           participate in competitions due to the personalized attention each student receives. The one-on-one time

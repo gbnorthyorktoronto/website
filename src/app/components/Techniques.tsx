@@ -7,7 +7,6 @@ const Container = styled(Box)(() => ({
   justifyContent: 'center',
   alignItems: 'center',
 
-  width: 428,
   height: 188,
   left: 158,
   top: 135,
@@ -24,13 +23,15 @@ const Body = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.white,
   fontWeight: 600,
   fontSize: 24,
-  width: 380,
 }))
 
 const Techniques = ({ children }: { children: ReactNode }) => {
   return (
-    <Container>
-      <Body>{children}</Body>
+    <Container
+      className="w-11/12 sm:w-[428px]"
+      mb={3}
+    >
+      <Body className="w-11/12 sm:w-[380px]">{children}</Body>
     </Container>
   )
 }
