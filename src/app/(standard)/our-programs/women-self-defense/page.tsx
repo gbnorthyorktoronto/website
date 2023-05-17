@@ -14,10 +14,25 @@ export default function WomenSelfDefense() {
       className="px-0 sm:px-[80px]"
     >
       <GGrey />
-      <Box display="flex" width="100%" justifyContent="space-between" mb={10}>
-        <Box>
-          <Title mt={20}>Women&apos;s Self-Defense</Title>
-          <BodyText width={700} mt={3.5}>
+      <Box
+        className="flex-col sm:flex-row items-center sm:items-start"
+        display="flex"
+        width="100%"
+        justifyContent="space-between"
+        mb={10}
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          className="items-center sm:items-start"
+        >
+          <Title
+            className="mt-[25px] sm:!mt-[160px] items-center sm:items-start"
+          >Women&apos;s Self-Defense</Title>
+          <BodyText
+            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            mt={3.5}
+          >
             Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
             Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
             Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
@@ -27,9 +42,11 @@ export default function WomenSelfDefense() {
           </BodyText>
         </Box>
         <Image
-          width={628}
-          height={678}
+          className="w-11/12 sm:w-[628px]"
+          width={1000}
+          height={1000}
           style={{
+            height: 'auto',
             marginTop: 50,
           }}
           src={WomenSelfDefensePhoto.src}
