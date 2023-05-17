@@ -76,12 +76,12 @@ const Quote = ({
 }) => {
   return (
     <QuoteContainer
+      pb={2}
       className={`w-11/12 sm:w-[${width}px]`}
-      height={height}
     >
       <QuoteIcon />
       <Text
-        width={textWidth}
+        width="98%"
       >
         {children}
       </Text>
@@ -117,6 +117,8 @@ export default function WeAreGracieBarra() {
               brotherhood, expansion, and integrity. Simply stated by himself:
             </BodyText>
             <Box
+              display="flex"
+              justifyContent="center"
               className="w-11/12 sm:w-[700px] mt-[25px] sm:mt-0"
             >
               <Quote
@@ -336,7 +338,12 @@ export default function WeAreGracieBarra() {
           display="flex"
           flexDirection="column"
         >
-          <Box width="95%">
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            width="95%"
+          >
             <Title
               className="text-center sm:text-start"
             >Unity, Pride</Title>
