@@ -15,7 +15,7 @@ export default function WomenSelfDefense() {
     >
       <GGrey />
       <Box
-        className="flex-col sm:flex-row items-center sm:items-start"
+        className="flex-col sm:flex-row items-center sm:items-start mt-[25px] sm:!mt-[160px]"
         display="flex"
         width="100%"
         justifyContent="space-between"
@@ -24,13 +24,13 @@ export default function WomenSelfDefense() {
         <Box
           display="flex"
           flexDirection="column"
-          className="items-center sm:items-start"
+          className="items-center sm:items-start sm:w-[60%]"
         >
           <Title
-            className="mt-[25px] sm:!mt-[160px] items-center sm:items-start"
+            className="items-center sm:items-start"
           >Women&apos;s Self-Defense</Title>
           <BodyText
-            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            className="w-11/12 text-center sm:text-start"
             mt={3.5}
           >
             Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
@@ -42,12 +42,11 @@ export default function WomenSelfDefense() {
           </BodyText>
         </Box>
         <Image
-          className="w-11/12 sm:w-[628px]"
+          className="w-11/12 sm:w-[500px]"
           width={1000}
           height={1000}
           style={{
             height: 'auto',
-            marginTop: 50,
           }}
           src={WomenSelfDefensePhoto.src}
           alt="Adults fighting Jiu-Jitsu"

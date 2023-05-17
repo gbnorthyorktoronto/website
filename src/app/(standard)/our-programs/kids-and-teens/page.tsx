@@ -18,7 +18,7 @@ export default function KidsAndTeens() {
     >
       <GGrey />
       <Box
-        className="flex-col sm:flex-row items-center sm:items-start"
+        className="flex-col sm:flex-row items-center sm:items-start mt-[25px] sm:!mt-[160px]"
         display="flex"
         width="100%"
         justifyContent="space-between"
@@ -26,13 +26,13 @@ export default function KidsAndTeens() {
         <Box
           display="flex"
           flexDirection="column"
-          className="items-center sm:items-start"
+          className="items-center sm:items-start sm:w-[60%]"
         >
           <Title
-            className="mt-[25px] sm:!mt-[160px] items-center sm:items-start"
+            className=" items-center sm:items-start"
           >Kids and Teens</Title>
           <BodyText
-            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            className="w-11/12text-center sm:text-start"
             mt={3.5}
           >
             Children and teens of all skill levels and abilities will benefit from Jiu-Jitsu classes at
@@ -50,12 +50,11 @@ export default function KidsAndTeens() {
           </BodyText>
         </Box>
         <Image
-          className="w-11/12 sm:w-[628px]"
+          className="w-11/12 sm:w-[500px]"
           width={1000}
           height={1000}
           style={{
             height: 'auto',
-            marginTop: 50,
           }}
           src={kidsAndTeensPhoto.src}
           alt="Kids and Teens with Jiu-Jitsu clothes"
@@ -69,7 +68,7 @@ export default function KidsAndTeens() {
         justifyContent="space-between"
       >
         <BodyText
-          className="w-11/12 sm:w-[550px] text-center sm:text-start"
+          className="w-11/12 sm:w-[80%] text-center sm:text-start"
         >
           Practicing Jiu-Jitsu at a Gracie Barra school helps children and teens
           release their energy in a healthy and productive way. Our certified
@@ -97,7 +96,7 @@ export default function KidsAndTeens() {
           width="100%"
         >
           <BodyText
-            className="text-center sm:text-end w-11/12 sm:w-[900px] mt-[25px] sm:mt-0 text-[22px] sm:text-[28px]"
+            className="text-center sm:text-end w-11/12 mt-[25px] sm:mt-0 text-[22px] sm:text-[28px]"
             color={theme.palette.secondary.main}
           >
             Gracie Barra is proud to offer Jiu-Jitsu classes that provide

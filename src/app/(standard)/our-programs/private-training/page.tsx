@@ -16,7 +16,7 @@ export default function PrivateTraining() {
     >
       <GGrey />
       <Box
-        className="flex-col sm:flex-row items-center sm:items-start"
+        className="flex-col sm:flex-row items-center sm:items-start mt-[25px] sm:!mt-[160px]"
         display="flex"
         width="100%"
         justifyContent="space-between"
@@ -24,13 +24,13 @@ export default function PrivateTraining() {
         <Box
           display="flex"
           flexDirection="column"
-          className="items-center sm:items-start"
+          className="items-center sm:items-start sm:w-[60%]"
         >
           <Title
-            className="mt-[25px] sm:!mt-[160px] items-center sm:items-start"
+            className="items-center sm:items-start"
           >Private Training</Title>
           <BodyText
-            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            className="w-11/12 text-center sm:text-start"
             mt={3.5}
           >
             Private Jiu-Jitsu lessons in North York, CA strengthen your skills and help you hone specific techniques
@@ -47,12 +47,11 @@ export default function PrivateTraining() {
           </BodyText>
         </Box>
         <Image
-          className="w-11/12 sm:w-[628px]"
+          className="w-11/12 sm:w-[500px]"
           width={1000}
           height={1000}
           style={{
             height: 'auto',
-            marginTop: 50,
           }}
           src={PrivateTrainingPhoto.src}
           alt="Private Jiu-Jitsu class"
@@ -61,7 +60,7 @@ export default function PrivateTraining() {
 
       <Box display="flex" flexDirection="column" mt={8} mb={10} alignItems="center">
         <Box
-          className="w-11/12 sm:w-[1450px] sm:h-[450px] justify-center sm:justify-between"
+          className="w-11/12 2xl:w-[1450px] sm:h-[450px] justify-center sm:justify-between"
           mt={10}
           display="flex"
           flexWrap="wrap"

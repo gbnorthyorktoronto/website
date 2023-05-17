@@ -17,7 +17,6 @@ const Container = styled(Box)(() => ({
   width: '100%',
   overflowX: 'hidden',
   overflowY: 'scroll',
-  // display: 'flex',
 }))
 
 const WhiteBox = styled(Box)(({ theme }) => ({

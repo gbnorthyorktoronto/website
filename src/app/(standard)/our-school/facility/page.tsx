@@ -61,7 +61,7 @@ export default function Schedule() {
         className="w-11/12 sm:w-[500px]"
       >
         <BodyText
-          className="mt-0 sm:mt-[128px] w-11/12 sm:w-[500px] text-center sm:text-start"
+          className="mt-0 sm:!mt-[128px] w-11/12 sm:w-[500px] text-center sm:text-start"
           mb={2}
         >
           <b>SCHOOL LOCATION</b>

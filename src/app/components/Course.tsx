@@ -35,7 +35,7 @@ const Body = styled(Typography)(({ theme }) => ({
 
 const Course = ({ children, title }: { children: ReactNode; title: string }) => {
   return (
-    <Container className="mb-[30px] sm:mb-0">
+    <Container className="mb-[30px] 2xl:mb-0">
       <Title>{title}</Title>
       <Body mt={3}>{children}</Body>
     </Container>
