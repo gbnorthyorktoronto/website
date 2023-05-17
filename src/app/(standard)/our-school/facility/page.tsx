@@ -12,24 +12,29 @@ const Container = styled(Box)(() => ({
   width: '100%',
   overflowX: 'hidden',
   overflowY: 'scroll',
-  paddingInline: 80,
   display: 'flex',
-  justifyContent: 'center',
 }))
 
 const ContentContainer = styled(Box)(() => ({
-  marginTop: 128,
-  marginRight: 230,
+  display: 'flex',
+  flexDirection: 'column',
   marginBottom: 80,
 }))
 
 export default function Schedule() {
   return (
-    <Container>
+    <Container
+      className="flex-col sm:flex-row px-0 sm:px-[80px] justify-start sm:justify-center items-center sm:items-start"
+    >
       <GGrey />
-      <ContentContainer>
+      <ContentContainer
+        className="items-center sm:items-start mr-0 sm:mr-[230px] mt-[25px] sm:mt-[128px]"
+      >
         <Title>Our Facility</Title>
-        <BodyText width={300} mt={1}>
+        <BodyText
+          className="!mt-[25px] sm:!mt-[8px] text-center sm:text-start"
+          width={300}
+        >
           <b>SCHOOL PHONE NUMBER</b>
           <br />
           (416) 782-8255
@@ -52,8 +57,13 @@ export default function Schedule() {
           Sunday: CLOSED
         </BodyText>
       </ContentContainer>
-      <Box width={500}>
-        <BodyText width={600} mt={16} mb={2}>
+      <Box
+        className="w-11/12 sm:w-[500px]"
+      >
+        <BodyText
+          className="mt-0 sm:mt-[128px] w-11/12 sm:w-[500px] text-center sm:text-start"
+          mb={2}
+        >
           <b>SCHOOL LOCATION</b>
           <br />
           100 Bridgeland Ave, North York, ON M6A 1Z4
