@@ -31,7 +31,7 @@ const Text = styled(Typography)(({ theme }) => ({
 
 const Skill = ({ children }: { children: ReactNode }) => {
   return (
-    <Container>
+    <Container className="mb-5">
       <Text>{children}</Text>
     </Container>
   )

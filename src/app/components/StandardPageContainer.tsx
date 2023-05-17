@@ -6,7 +6,6 @@ const StandardPageContainer = styled(Box)(() => ({
   width: '100%',
   overflowX: 'hidden',
   overflowY: 'scroll',
-  paddingInline: 80,
   display: 'flex',
   flexDirection: 'column',
   alignSelf: 'center',

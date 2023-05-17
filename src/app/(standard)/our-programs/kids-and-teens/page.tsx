@@ -13,12 +13,28 @@ export default function KidsAndTeens() {
   const theme: Theme = useTheme()
 
   return (
-    <StandardPageContainer>
+    <StandardPageContainer
+      className="px-0 sm:px-[80px]"
+    >
       <GGrey />
-      <Box display="flex" width="100%" justifyContent="space-between">
-        <Box>
-          <Title mt={20}>Kids and Teens</Title>
-          <BodyText width={700} mt={3.5}>
+      <Box
+        className="flex-col sm:flex-row items-center sm:items-start"
+        display="flex"
+        width="100%"
+        justifyContent="space-between"
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          className="items-center sm:items-start"
+        >
+          <Title
+            className="mt-[25px] sm:!mt-[160px] items-center sm:items-start"
+          >Kids and Teens</Title>
+          <BodyText
+            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            mt={3.5}
+          >
             Children and teens of all skill levels and abilities will benefit from Jiu-Jitsu classes at
             Gracie Barra in North York, CA. Our Gracie Barra Kids Program is designed to teach
             children self-discipline as well as providing a unique way to express themselves. Our
@@ -34,9 +50,11 @@ export default function KidsAndTeens() {
           </BodyText>
         </Box>
         <Image
-          width={628}
-          height={678}
+          className="w-11/12 sm:w-[628px]"
+          width={1000}
+          height={1000}
           style={{
+            height: 'auto',
             marginTop: 50,
           }}
           src={kidsAndTeensPhoto.src}
@@ -44,8 +62,15 @@ export default function KidsAndTeens() {
         />
       </Box>
 
-      <Box display="flex" mt={15} mb={10} justifyContent="space-between">
-        <BodyText width={550}>
+      <Box
+        className="flex-col sm:flex-row items-center sm:items-start mb-[80px] sm:!mb-[30px]"
+        display="flex"
+        mt={15}
+        justifyContent="space-between"
+      >
+        <BodyText
+          className="w-11/12 sm:w-[550px] text-center sm:text-start"
+        >
           Practicing Jiu-Jitsu at a Gracie Barra school helps children and teens
           release their energy in a healthy and productive way. Our certified
           instructors teach children to focus their attention on one task at a time,
@@ -64,14 +89,30 @@ export default function KidsAndTeens() {
           experience a fitness program like no other. Kids and teens alike will enjoy
           a boost in confidence, better focus and critical self-defense skills.
         </BodyText>
-        <Box display="flex" flexDirection="column" alignItems="flex-end">
-          <BodyText textAlign="end" width={900} fontSize={28} color={theme.palette.secondary.main}>
+        <Box
+          className="items-center sm:items-end"
+          alignItems="flex-end"
+          display="flex"
+          flexDirection="column"
+          width="100%"
+        >
+          <BodyText
+            className="text-center sm:text-end w-11/12 sm:w-[900px] mt-[25px] sm:mt-0 text-[22px] sm:text-[28px]"
+            color={theme.palette.secondary.main}
+          >
             Gracie Barra is proud to offer Jiu-Jitsu classes that provide
             children of all ages real-world benefits. By practicing Jiu-Jitsu,
             children learn valuable skills they wouldn&apos;t develop from
             other sports, including:
           </BodyText>
-          <Box mt={10} display="flex" width={730} height={480} flexWrap="wrap" justifyContent="space-between" alignItems="space-between">
+          <Box
+            className="w-11/12 sm:w-[730px] justify-center sm:justify-between"
+            alignItems="space-between"
+            display="flex"
+            flexWrap="wrap"
+            mt={10}
+            height={480}
+          >
             <Skill>Coordination</Skill>
             <Skill>Increased Focus and Concentration</Skill>
             <Skill>Self-Defense</Skill>

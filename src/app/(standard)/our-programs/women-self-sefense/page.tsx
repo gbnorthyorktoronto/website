@@ -10,7 +10,9 @@ import Image from "next/image"
 
 export default function WomenSelfDefense() {
   return (
-    <StandardPageContainer>
+    <StandardPageContainer
+      className="px-0 sm:px-[80px]"
+    >
       <GGrey />
       <Box display="flex" width="100%" justifyContent="space-between" mb={10}>
         <Box>
