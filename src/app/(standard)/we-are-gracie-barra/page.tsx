@@ -7,7 +7,6 @@ import { backgroundHeight } from "@/app/constants"
 import GGrey from "@/app/components/GGrey"
 import values from '../../images/values.jpeg'
 import Image from "next/image"
-import quoteBackground from '../../images/quote-background.png'
 import excellencePhoto from '../../images/excellence.jpg'
 import athleticPerformancePhoto from '../../images/athletic-performance.jpg'
 import { ReactNode } from "react"
@@ -18,7 +17,7 @@ const Container = styled(Box)(() => ({
   width: '100%',
   overflowX: 'hidden',
   overflowY: 'scroll',
-  paddingInline: 80,
+  // display: 'flex',
 }))
 
 const WhiteBox = styled(Box)(({ theme }) => ({
@@ -31,14 +30,10 @@ const Section = styled(Box)(() => ({
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'space-between',
-  height: '100%',
   width: '100%',
-  marginBottom: 80,
 }))
 
-const ContentContainer = styled(Box)(() => ({
-  width: '45%',
-}))
+const ContentContainer = styled(Box)(() => ({}))
 
 const Text = styled(Typography)(({ theme }) => ({
   fontWeight: 350,
@@ -80,7 +75,10 @@ const Quote = ({
   height: number
 }) => {
   return (
-    <QuoteContainer width={width} height={height}>
+    <QuoteContainer
+      className={`w-11/12 sm:w-[${width}px]`}
+      height={height}
+    >
       <QuoteIcon />
       <Text
         width={textWidth}
@@ -93,19 +91,37 @@ const Quote = ({
 
 export default function WeAreGracieBarra() {
   return (
-    <Container>
+    <Container
+      className="px-0 sm:px-[80px]"
+    >
       <GGrey />
-      <Box mt={10}>
-        <Section>
-          <ContentContainer>
-            <Title>Brotherhood, Integrity, Development</Title>
-            <BodyText lineHeight={1.75} width={700} mt={3}>
+      <Box
+        className="mt-[25px] sm:mt-[128px]"
+      >
+        <Section
+          className="flex-col sm:flex-row sm:h-full sm:mb-[80px]"
+        >
+          <ContentContainer
+            display="flex"
+            className="w-11/12 sm:w-[45%] flex-col items-center sm:items-start"
+          >
+            <Title
+              className="text-center sm:text-start"
+            >Brotherhood, Integrity, Development</Title>
+            <BodyText
+              className="w-11/12 sm:w-[700px] text-center sm:text-start mt-[25px]"
+              lineHeight={1.75}
+            >
               In a lifetime dedicated to the growth and development of Brazilian Jiu-Jitsu,
               Master Carlos Gracie Jr. has always guided his efforts and actions by the values of
               brotherhood, expansion, and integrity. Simply stated by himself:
             </BodyText>
-            <Box width={700}>
-              <Quote width={700} textWidth={650} height={250}>
+            <Box
+              className="w-11/12 sm:w-[700px] mt-[25px] sm:mt-0"
+            >
+              <Quote
+                width={700}
+                textWidth={650} height={250}>
                 &quot;My life is dedicated to Jiu-Jitsu. My goal was simply to build a brotherhood to
                 lead the expansion of Jiu-Jitsu while respecting the essence of our art. My students
                 are an extension of my family. I want each one of them to achieve their personal best
@@ -113,31 +129,40 @@ export default function WeAreGracieBarra() {
                 of those who came before us.&quot; - Carlos Gracie Jr.
               </Quote>
             </Box>
-            <BodyText lineHeight={1.75} width={700} mt={3}>
+            <BodyText
+              className="w-11/12 sm:w-[700px] text-center sm:text-start mt-[50px] sm:mt-[25px]"
+              lineHeight={1.75}
+            >
               The values and principles that build Master Carlos Gracie Jr.&apos;s personal philosophy have
               defined to a great extent the culture of Gracie Barra North York. The table to the right
               summarizes each one of Carlos&apos; core values and how they have impacted Gracie Barra as an
               organization:
             </BodyText>
           </ContentContainer>
-          <ContentContainer>
+          <ContentContainer
+            className="w-11/12 sm:w-[45%]"
+          >
             <Image
+              className="sm:mt-[50px]"
               src={values.src}
               alt="Gracie Barra Values"
               width={1000}
               height={1000}
               style={{
-                width: '100%',
                 height: 'auto',
-                marginTop: 50,
               }}
             />
           </ContentContainer>
         </Section>
 
-        <Section>
-          <ContentContainer>
+        <Section
+          className="flex-col sm:flex-row sm:h-full sm:mb-[80px]"
+        >
+          <ContentContainer
+            className="w-11/12 sm:w-[45%]"
+          >
             <Image
+              className="mt-[50px] sm:mt-0"
               src={excellencePhoto.src}
               alt="Jiu-Jitsu Class"
               width={620}
@@ -148,9 +173,16 @@ export default function WeAreGracieBarra() {
               }}
             />
           </ContentContainer>
-          <ContentContainer>
+          <ContentContainer
+            display="flex"
+            flexDirection="column"
+            className="w-11/12 sm:w-[45%] mt-[25px] sm:mt-0 items-center sm:items-start"
+          >
             <Title>Excellence</Title>
-            <BodyText lineHeight={1.75} width={700} mt={3}>
+            <BodyText
+              className="w-11/12 sm:w-[700px] text-center sm:text-start"
+              lineHeight={1.75} mt={3}
+            >
               Our team color is the red, our team flag is the Red Shield. The Red Shield connects the
               Gracie Barra community, our students taking their first class, our Black Belts graduating,
               our athletes in battle, our instructors teaching, our Schools keeping the legacy alive.
@@ -172,10 +204,19 @@ export default function WeAreGracieBarra() {
           </ContentContainer>
         </Section>
 
-        <Section>
-          <ContentContainer>
+        <Section
+          className="flex-col sm:flex-row sm:h-full sm:mb-[80px]"
+        >
+          <ContentContainer
+            display="flex"
+            flexDirection="column"
+            className="w-11/12 sm:w-[45%] mt-[25px] sm:mt-0 items-center sm:items-start"
+          >
             <Title>Athletic Performance</Title>
-            <BodyText lineHeight={1.75} width={700} mt={3}>
+            <BodyText
+              className="w-11/12 sm:w-[700px] text-center sm:text-start"
+              lineHeight={1.75} mt={3}
+            >
               Athletics at Gracie Barra North York is represented by a sport Jiu-Jitsu competition team
               known as EQUIPE GB. Athletics within Gracie Barra builds community and pride through the
               engagement of students, staff, parents, and friends, and creates a portal through which
@@ -198,8 +239,11 @@ export default function WeAreGracieBarra() {
               throughout their lives.
             </BodyText>
           </ContentContainer>
-          <ContentContainer>
+          <ContentContainer
+            className="w-11/12 sm:w-[45%]"
+          >
             <Image
+              className="mt-[50px] sm:mt-0"
               src={athleticPerformancePhoto.src}
               alt="Jiu-Jitsu Tournament"
               width={620}
@@ -212,11 +256,26 @@ export default function WeAreGracieBarra() {
           </ContentContainer>
         </Section>
 
-        <Section>
-          <ContentContainer>
-            <WhiteBox>
-              <Title>Gratitude, Appreciation, Legacy</Title>
-              <BodyText lineHeight={1.75} mt={3}>
+        <Section
+          className="flex-col sm:flex-row sm:h-full sm:mb-[80px]"
+        >
+          <ContentContainer
+            className="w-11/12 sm:w-[45%]"
+          >
+            <WhiteBox
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              className="mt-[50px] sm:mt-0"
+            >
+              <Title
+                textAlign="center"
+              >Gratitude, Appreciation, Legacy</Title>
+              <BodyText
+                width="95%"
+                textAlign="center"
+                lineHeight={1.75} mt={3}
+              >
                 We all should learn from our past to educate the future. The pictures on the walls of
                 every Gracie Barra School tell our story from the early twentieth century to today.
                 First in line, Mitsuyo Maeda, the Japanese with unparalleled skill who brought the
@@ -231,10 +290,23 @@ export default function WeAreGracieBarra() {
               </BodyText>
             </WhiteBox>
           </ContentContainer>
-          <ContentContainer>
-            <WhiteBox>
-              <Title>♫ Uh é Gracie Barra Aha Uhu ♫</Title>
-              <BodyText lineHeight={1.75} mt={3}>
+          <ContentContainer
+            className="w-11/12 sm:w-[45%]"
+          >
+            <WhiteBox
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              className="mt-[50px] sm:mt-0"
+            >
+              <Title
+                textAlign="center"
+              >♫ Uh é Gracie Barra Aha Uhu ♫</Title>
+              <BodyText
+                width="95%"
+                textAlign="center"
+                lineHeight={1.75} mt={3}
+              >
                 In times of trouble, or when we have a challenge ahead, we know the importance of
                 family and friends. In the sporting arena is no different. Whenever an athlete enters
                 the arena of competition, the positive energy of the crowd is contagious and makes
@@ -256,10 +328,23 @@ export default function WeAreGracieBarra() {
             </WhiteBox>
           </ContentContainer>
         </Section>
-        <Box mb={10} width="100%" alignItems="center" display="flex" flexDirection="column">
-          <Box width="70%">
-            <Title>Unity, Pride</Title>
-            <BodyText mt={3} lineHeight={1.75}>
+        <Box
+          className="mt-[50px] sm:mt-0"
+          mb={10}
+          width="100%"
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+        >
+          <Box width="95%">
+            <Title
+              className="text-center sm:text-start"
+            >Unity, Pride</Title>
+            <BodyText
+              width="100%"
+              className="text-center sm:text-start"
+              lineHeight={1.75} mt={3}
+            >
               How we dress identifies us as a group and sets, for many people, the values we represent.
               What we use transmits to the others an idea about who we are. <b>Wearing the red shirt is
               representing the GB Family.</b>
@@ -275,7 +360,11 @@ export default function WeAreGracieBarra() {
               Master Carlos Gracie Jr.
             </Quote>
 
-            <BodyText mt={3} lineHeight={1.75}>
+            <BodyText
+              width="100%"
+              className="text-center sm:text-start"
+              lineHeight={1.75} mt={3}
+            >
               <b>Wearing the red shirt is saying it loudly to the world: I believe in Gracie Barra.</b>
               <br />
               <br />
@@ -285,7 +374,7 @@ export default function WeAreGracieBarra() {
               <br />
               <br />
               The red shirt seeks respect, brotherhood, friendship, loyalty and love for the GB Team.
-              <b>Wearing the red shirt is having it on your chest: I am Gracie Barra!</b>
+              <b> Wearing the red shirt is having it on your chest: I am Gracie Barra!</b>
             </BodyText>
 
             <Quote textWidth={900} width={1050} height={220}>
@@ -296,7 +385,11 @@ export default function WeAreGracieBarra() {
               or cheering from the stands. That&apos;s Gracie Barra!&quot;- Prof. Philipe Della Monica
             </Quote>
 
-            <BodyText mt={3} lineHeight={1.75}>
+            <BodyText
+              width="100%"
+              className="text-center sm:text-start"
+              lineHeight={1.75} mt={3}
+            >
               Around the world people are faced with the GB red sea. They identify our uniform
               and know that there exists a family member from Gracie Barra defending our mentality,
               representing our philosophy and our values. Wearing the red shirt means keeping our
