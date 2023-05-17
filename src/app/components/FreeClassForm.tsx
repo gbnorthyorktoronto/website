@@ -7,10 +7,7 @@ import { useState } from "react"
 const Form = styled('form')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  width: 470,
-  marginTop: 98,
   backgroundColor: theme.palette.secondary.main,
-  height: 750,
   padding: 30,
   borderRadius: 8,
 }))
@@ -94,7 +91,10 @@ const FreeClassForm = () => {
   }
 
   return (
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form
+        className="sm:h-[750px] mt-[10px] sm:mt-[98px] w-11/12 sm:w-[470px]"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <Title color="#fff" width={300} mb={3} textAlign="start">Schedule for your free FREE CLASS today!</Title>
         <Input
           placeholder="Full name *"
