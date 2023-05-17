@@ -70,21 +70,15 @@ const itemData = [
 const Container = styled(Box)(() => ({
   height: backgroundHeight,
   width: '100%',
-  maxWidth: 1440,
   overflowX: 'hidden',
   overflowY: 'scroll',
-  paddingInline: 80,
   display: 'flex',
   justifyContent: 'center',
 }))
 
 const ContentContainer = styled(Box)(() => ({
-  marginTop: 128,
-  marginRight: 230,
-  marginBottom: 80,
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'start',
 }))
 
 const Modal = ({ onClose }: { onClose: () => void }) => {
@@ -132,35 +126,59 @@ export default function OurSchool() {
     })
   }
 
+  const isMobile = () => {
+    return !!(window.innerWidth <= 500)
+  }
+
   return (
     <>
-      <Container textAlign="center">
-        <Modal onClose={handleMenuClose} /> :
+      <Container
+        className="px-[5px] sm:px-[80px] flex-col sm:flex-row items-center sm:items-start"
+        textAlign="center"
+      >
+        <Modal onClose={handleMenuClose} />
         <GGrey />
-        <ContentContainer>
+        <ContentContainer
+          className="items-center	sm:items-start mt-[25px] sm:mt-[128px] sm:mr-[192px]"
+        >
           <Title>Our School</Title>
-          <BodyText width={500} mt={1} textAlign="start">
+          <BodyText
+            className="w-11/12 sm:w-[500px] !mt-[25px] sm:!mt-[16px] text-[16px] sm:text-[18px] text-center sm:text-start"
+          >
             Our academy is a spacious 3,000 sqft with lockers, male and female change rooms, showers,
             GBWear and all the gear you need to learn BJJ. The mats are placed over hundreds of tires
             to prevent injuries, and wear and tear on your body.
           </BodyText>
         </ContentContainer>
-        <ImageList sx={{ width: 800, height: 450, marginTop: 16 }} cols={5} rowHeight={200}>
+        <ImageList
+          className="mt-[25px] sm:mt-[128px] w-11/12 sm:w-[700px] h-[450px]"
+          cols={isMobile() ? 2 : 4}
+          rowHeight={150}
+          gap={2}
+        >
           {itemData.map((item) => {
             return (
               (
-                <Button key={item.title} onClick={() => handleMenuOpen(item.img.src)}>
-                  <ImageListItem>
-                  <Image
-                    width={150}
-                    height={250}
-                    style={{
-                      marginTop: 50,
+                <Button
+                  sx={{
+                    width: 150,
+                  }}
+                  key={item.title}
+                  onClick={() => handleMenuOpen(item.img.src)}
+                >
+                  <ImageListItem
+                    sx={{
+                      width: 150,
                     }}
-                    src={`${item.img.src}?w=164&h=164&fit=crop&auto=format`}
-                    alt={item.title}
-                    loading="lazy"
-                  />
+                    key={item.title}
+                  >
+                    <Image
+                      sizes="100vw"
+                      fill={true}
+                      src={`${item.img.src}?w=164&h=164&fit=crop&auto=format`}
+                      alt={item.title}
+                      loading="lazy"
+                    />
                   </ImageListItem>
                 </Button>
               )

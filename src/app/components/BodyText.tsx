@@ -19,7 +19,13 @@ const BodyText = ({ children, fontSize = 18, lineHeight = 2.5, color, ...props }
   const newLineHeight = lineHeight || 2.5
 
   return (
-    <Text {...props} lineHeight={newLineHeight} color={newColor} fontSize={fontSize}>{children}</Text>
+    <Text
+      {...props}
+      className={`leading-[25px] sm:leading-[45px] ${props.className}`}
+      lineHeight={newLineHeight}
+      color={newColor}
+      fontSize={fontSize}>
+    {children}</Text>
   )
 }
 
