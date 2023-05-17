@@ -32,7 +32,7 @@ export default function KidsAndTeens() {
             className=" items-center sm:items-start"
           >Kids and Teens</Title>
           <BodyText
-            className="w-11/12text-center sm:text-start"
+            className="w-11/12 text-center sm:text-start mb-[25px] sm:mb-0"
             mt={3.5}
           >
             Children and teens of all skill levels and abilities will benefit from Jiu-Jitsu classes at
