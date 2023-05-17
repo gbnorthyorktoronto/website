@@ -19,6 +19,7 @@ import fightClass from '../../images/image-list/fight-class.jpeg'
 import medals1 from '../../images/image-list/medals1.jpeg'
 import medals2 from '../../images/image-list/medals2.jpeg'
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 const itemData = [
   {
@@ -111,6 +112,11 @@ const Modal = ({ onClose }: { onClose: () => void }) => {
 
 export default function OurSchool() {
   const setImagePopperState = useSetImagePopperState()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(!!(window.innerWidth <= 500))
+  }, [])
 
   const handleMenuClose = () => {
     setImagePopperState({
@@ -124,10 +130,6 @@ export default function OurSchool() {
       src,
       open: true,
     })
-  }
-
-  const isMobile = () => {
-    return !!(window.innerWidth <= 500)
   }
 
   return (
@@ -152,7 +154,7 @@ export default function OurSchool() {
         </ContentContainer>
         <ImageList
           className="mt-[25px] sm:mt-[128px] w-11/12 sm:w-[700px] h-[450px]"
-          cols={isMobile() ? 2 : 4}
+          cols={isMobile ? 2 : 4}
           rowHeight={150}
           gap={2}
         >
