@@ -131,7 +131,7 @@ export default function WeAreGracieBarra() {
               </Quote>
             </Box>
             <BodyText
-              className="w-11/12 sm:w-[700px] text-center sm:text-start mt-[50px] sm:mt-[25px]"
+              className="w-11/12 sm:w-[700px] text-center sm:text-start mt-[50px] sm:!mt-[25px]"
               lineHeight={1.75}
             >
               The values and principles that build Master Carlos Gracie Jr.&apos;s personal philosophy have
