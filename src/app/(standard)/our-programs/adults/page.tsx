@@ -15,18 +15,32 @@ export default function Adults() {
       className="px-0 sm:px-[80px]"
     >
       <GGrey />
-      <Box display="flex" width="100%" justifyContent="space-between">
-        <Box>
-          <Title mt={20}>Adults</Title>
-          <BodyText width={700} mt={3.5}>
-          From the very beginning of Gracie Barra, Master Carlos Gracie Jr. has had one goal in
-          mind: Jiu-Jitsu for Everyone. For over 30 years, we have offered classes for adults
-          that teach people of all backgrounds and skill levels the art of Jiu-Jitsu. Our
-          structured curriculum is designed specifically to help you succeed during your
-          training in the art of Jiu-Jitsu.
-          We offer a wide range of adult Jiu-Jitsu classes in North York so students can choose the
-          class that best suits their needs. We have three tiers of classes that address varying
-          degrees of skill and knowledge.
+      <Box
+        className="flex-col sm:flex-row items-center sm:items-start"
+        display="flex"
+        width="100%"
+        justifyContent="space-between"
+      >
+        <Box
+          display="flex"
+          flexDirection="column"
+          className="items-center sm:items-start"
+        >
+          <Title
+            className="mt-[25px] sm:!mt-[160px] items-center sm:items-start"
+          >Adults</Title>
+          <BodyText
+            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            mt={3.5}
+          >
+            From the very beginning of Gracie Barra, Master Carlos Gracie Jr. has had one goal in
+            mind: Jiu-Jitsu for Everyone. For over 30 years, we have offered classes for adults
+            that teach people of all backgrounds and skill levels the art of Jiu-Jitsu. Our
+            structured curriculum is designed specifically to help you succeed during your
+            training in the art of Jiu-Jitsu.
+            We offer a wide range of adult Jiu-Jitsu classes in North York so students can choose the
+            class that best suits their needs. We have three tiers of classes that address varying
+            degrees of skill and knowledge.
           <br />
           <br />
           <br />
@@ -34,9 +48,11 @@ export default function Adults() {
           </BodyText>
         </Box>
         <Image
-          width={628}
-          height={678}
+          className="w-11/12 sm:w-[628px]"
+          width={1000}
+          height={1000}
           style={{
+            height: 'auto',
             marginTop: 50,
           }}
           src={AdultsPhoto.src}
@@ -44,8 +60,21 @@ export default function Adults() {
         />
       </Box>
 
-      <Box display="flex" flexDirection="column" mt={8} mb={10} alignItems="center">
-        <Box mt={10} display="flex" width={1174} height={300} flexWrap="wrap" justifyContent="space-between" alignItems="space-between">
+      <Box
+        display="flex"
+        flexDirection="column"
+        mt={8}
+        mb={10}
+        alignItems="center"
+      >
+        <Box
+          className="w-11/12 sm:w-[1174px]"
+          mt={10}
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="space-between"
+          alignItems="space-between"
+        >
           <Course title="GB1">
             This course can be thought of as Jiu-Jitsu for beginners. This course teaches the fundamentals and
             principles of BJJ as well as the skills you need to grow personally in a Jiu-Jitsu lifestyle.
@@ -59,7 +88,11 @@ export default function Adults() {
           begin applying what they learn during their Jiu-Jitsu training to everyday life.
           </Course>
         </Box>
-        <BodyText width={870} textAlign="center" mt={8.75}>
+        <BodyText
+          className="w-11/12 sm:w-[870px]"
+          textAlign="center"
+          mt={8.75}
+        >
           Our adult Jiu-Jitsu programs are specifically designed with each student&apos;s personal achievement in mind.
           Your personal goals, such as fitness or self-defense, will be taken into account when you sign up.
           Our self-defense classes for men and women are a great way to practice real-world techniques while
