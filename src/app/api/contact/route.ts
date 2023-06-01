@@ -4,8 +4,9 @@ import sendgrid from "@sendgrid/mail"
 sendgrid.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_TOKEN || '')
 
 export async function POST(req: Request, res: Response) {
+  const data = await req.json()
+
   try {
-    const data = await req.json()
     await sendgrid.send({
       to: gbInfo.email || '',
       from: gbInfo.email || '',
@@ -40,6 +41,12 @@ export async function POST(req: Request, res: Response) {
       text: 'Error'
     }));
   }
+
+  await sendgrid.send({
+    to: data?.email || '',
+    from: gbInfo.email || '',
+    templateId: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_TEMPLATE_ID || '',
+  })
 
   return new Response(JSON.stringify({
     ok: 200,

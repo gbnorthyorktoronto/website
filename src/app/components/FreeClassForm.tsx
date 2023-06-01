@@ -2,7 +2,7 @@ import { Button as ButtonMui, CircularProgress, FormControl, InputLabel, MenuIte
 import { SubmitHandler, useForm } from "react-hook-form"
 import Title from "./Title"
 import InputWarning from "./InputWarning"
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 const Form = styled('form')(({ theme }) => ({
   display: 'flex',
@@ -43,13 +43,15 @@ const FreeClassForm = () => {
     setProgram(event.target.value as string)
   };
 
-  const defaultValues = {
-    name: '',
-    email: '',
-    phone: '',
-    program: '',
-    additionalInformation: '',
-  }
+  const defaultValues = useMemo(() => {
+    return {
+      name: '',
+      email: '',
+      phone: '',
+      program: '',
+      additionalInformation: '',
+    }
+  }, [])
 
   const {
     formState: { errors, isSubmitted, isSubmitting },
@@ -62,6 +64,14 @@ const FreeClassForm = () => {
     reValidateMode: 'onChange',
     defaultValues,
   })
+
+  useEffect(() => {
+    if (isSubmitted) {
+      console.log("Submitted")
+      reset(defaultValues)
+      setProgram('')
+    }
+  }, [defaultValues, isSubmitted, reset])
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     const res = await fetch("/api/contact", {
@@ -83,10 +93,6 @@ const FreeClassForm = () => {
     if (error) {
       console.log(error);
       return;
-    }
-
-    if (isSubmitted) {
-      reset(defaultValues)
     }
   }
 
