@@ -1,6 +1,6 @@
 import { Place, MailOutline } from '@mui/icons-material';
 import { Box, Typography, styled } from '@mui/material'
-import { gbInfo } from '../constants';
+import { gbPublicInfo } from '../constants';
 
 const Text = styled(Typography)(({ theme }) => ({
   display: 'flex',
@@ -32,8 +32,8 @@ const Address = () => {
       className="flex-col sm:flex-row mt-[20px] sm:mt-0"
       alignItems="center"
     >
-      <Text className={`${fontSize} ${margin}`}><Location className={hidden} />{gbInfo.address}</Text>
-      <Text className={`${fontSize} ${margin}`}><Mail className={hidden} />{gbInfo.email}</Text>
+      <Text className={`${fontSize} ${margin}`}><Location className={hidden} />{gbPublicInfo.address}</Text>
+      <Text className={`${fontSize} ${margin}`}><Mail className={hidden} />{gbPublicInfo.email}</Text>
     </Box>
   )
 }

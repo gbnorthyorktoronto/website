@@ -1,4 +1,4 @@
-import { gbInfo } from "@/app/constants";
+import { gbPublicInfo } from "@/app/constants";
 import sendgrid from "@sendgrid/mail"
 
 sendgrid.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_TOKEN || '')
@@ -8,8 +8,8 @@ export async function POST(req: Request, res: Response) {
 
   try {
     await sendgrid.send({
-      to: gbInfo.email || '',
-      from: gbInfo.email || '',
+      to: gbPublicInfo.email || '',
+      from: gbPublicInfo.email || '',
       subject: data?.subject,
       html: `
       <body>
@@ -28,7 +28,6 @@ export async function POST(req: Request, res: Response) {
       `,
     })
   } catch (error) {
-    console.log(error);
     if (error instanceof Error) {
       return new Response(JSON.stringify({
         error: 400,
@@ -44,7 +43,7 @@ export async function POST(req: Request, res: Response) {
 
   await sendgrid.send({
     to: data?.email || '',
-    from: gbInfo.email || '',
+    from: gbPublicInfo.email || '',
     templateId: process.env.NEXT_PUBLIC_SENDGRID_EMAIL_TEMPLATE_ID || '',
   })
 

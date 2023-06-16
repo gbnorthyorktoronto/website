@@ -5,7 +5,7 @@ import { Box, styled } from "@mui/material"
 import Title from "../../components/Title"
 import BodyText from "../../components/BodyText"
 import FreeClassForm from "../../components/FreeClassForm"
-import { backgroundHeight, gbInfo } from "../../constants"
+import { backgroundHeight, gbPublicInfo } from "../../constants"
 import GGrey from "../../components/GGrey"
 
 const Container = styled(Box)(() => ({
@@ -40,9 +40,9 @@ export default function Contact() {
           Gracie Barra North York, Toronto. <br /><br className="sm:hidden" />
 
           <b>
-            Location: {gbInfo.address}<br />
-            Phone: {gbInfo.phone} <br />
-            Email: {gbInfo.email}
+            Location: {gbPublicInfo.address}<br />
+            Phone: {gbPublicInfo.phone} <br />
+            Email: {gbPublicInfo.email}
           </b>
         </BodyText>
 

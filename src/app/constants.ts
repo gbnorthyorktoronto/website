@@ -1,7 +1,7 @@
 export const backgroundHeight = 'calc(100vh - 160px)'
 
 // Contact Information
-export const gbInfo = {
+export const gbPublicInfo = {
   email: 'gbnorthyorktoronto@gmail.com',
   address: '100 Bridgeland Ave, North York, ON M6A 1Z4',
   phone: '(416) 782-8255',
