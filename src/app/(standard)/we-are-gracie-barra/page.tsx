@@ -94,7 +94,7 @@ export default function WeAreGracieBarra() {
       <title>We are Gracie Barra | North York</title>
       <meta
         name="description"
-        content="Gracie Barra's values and principles help athletes train harder, live smarter and achieve more both inside the classroom and out. Learn more about Master Carlos Gracie Jr. and his vision for Gracie Barra School, as well as our students."
+        content="Gracie Barra values and principles help athletes train harder, live smarter and achieve more both inside the classroom and out. Learn more about Master Carlos Gracie Jr. and his vision for Gracie Barra School, as well as our students."
       />
 
       <Container

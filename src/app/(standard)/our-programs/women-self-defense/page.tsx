@@ -11,10 +11,10 @@ import Image from "next/image"
 export default function WomenSelfDefense() {
   return (
     <>
-      <title>Women's self defense | Gracie Barra North York</title>
+      <title>Women&apos;s self defense | Gracie Barra North York</title>
       <meta
         name="description"
-        content="The Gracie Women Empowered program is a jiu-jitsu-based women's self-defense system which addresses the 15 most common threats against women."
+        content="The Gracie Women Empowered program is a jiu-jitsu-based women self-defense system which addresses the 15 most common threats against women."
       />
 
       <StandardPageContainer
@@ -40,14 +40,14 @@ export default function WomenSelfDefense() {
               className="w-11/12 text-center sm:text-start"
               mt={3.5}
             >
-              Discover empowerment and confidence like never before with the Gracie Barra Women's Self-Defense Class.
-              Step into a supportive and inclusive environment where you'll learn essential techniques to protect
+              Discover empowerment and confidence like never before with the Gracie Barra Women&apos;s Self-Defense Class.
+              Step into a supportive and inclusive environment where you&apos;ll learn essential techniques to protect
               yourself and boost your self-assurance. Led by experienced instructors, this class focuses on practical
-              skills tailored to real-life situations, ensuring you're well-prepared and capable. Whether you're a
-              beginner or have some martial arts experience, you'll find a welcoming community that fosters growth and
+              skills tailored to real-life situations, ensuring you&apos;re well-prepared and capable. Whether you&apos;re a
+              beginner or have some martial arts experience, you&apos;ll find a welcoming community that fosters growth and
               camaraderie. Join us in mastering effective self-defense while building strength, resilience, and
               friendships that last a lifetime. Embrace the opportunity to embrace your inner strength - enroll in the
-              Gracie Barra Women's Self-Defense Class today and embark on a transformative journey of empowerment.
+              Gracie Barra Women&apos;s Self-Defense Class today and embark on a transformative journey of empowerment.
             </BodyText>
           </Box>
           <Image
