@@ -29,67 +29,75 @@ export default function Schedule() {
   const titleColor = theme.palette.primary.main
 
   return (
-    <Container
-      className="items-center sm:items-start px-0 sm:px-[80px]"
-    >
-      <GGrey />
-      <Title
-        className="!mt-[25px] sm:!mt-[128px]"
-      >Our Instructors</Title>
-      <InstructorContainer
-        className="flex-col sm:flex-row items-center sm:items-start mt-[65px] sm:mt-[28px] sm:mb-[28px]"
+    <>
+      <title>Instructors | Gracie Barra North York</title>
+      <meta
+        name="description"
+        content="Meet the Gracie Barra Brazilian Jiu-Jitsu instructors. All instructors are skilled martial artists and expert instructors."
+      />
+
+      <Container
+        className="items-center sm:items-start px-0 sm:px-[80px]"
       >
-        <Image
-          src={fabianoPhoto.src}
-          alt="Instructors Photo"
-          width={235}
-          height={248}
-        />
-        <Box
-          display="flex"
-          flexDirection="column"
-          className="mt-[28px] sm:mt-0 ml-0 sm:ml-[28px] items-center sm:items-start"
+        <GGrey />
+        <Title
+          className="!mt-[25px] sm:!mt-[128px]"
+        >Our Instructors</Title>
+        <InstructorContainer
+          className="flex-col sm:flex-row items-center sm:items-start mt-[65px] sm:mt-[28px] sm:mb-[28px]"
         >
-          <Title
-            color={titleColor}
-            className="mb-[16px]"
-          >Fabiano De Freitas</Title>
-          <BodyText
-            className="text-center sm:text-start"
-            width="90%"
+          <Image
+            src={fabianoPhoto.src}
+            alt="Instructors Photo"
+            width={235}
+            height={248}
+          />
+          <Box
+            display="flex"
+            flexDirection="column"
+            className="mt-[28px] sm:mt-0 ml-0 sm:ml-[28px] items-center sm:items-start"
           >
-            2nd Degree Black Belt Professor Fabiano de Freitas is the Head Instructor of Gracie Barra North York, Toronto. He was born in Campinas, São Paulo, Brazil.
-            With more than 13 years of teaching experience.
-          </BodyText>
-        </Box>
-      </InstructorContainer>
-      <InstructorContainer
-        className="flex-col sm:flex-row items-center sm:items-start mt-[65px] sm:mt-[28px]]"
-      >
-        <Image
-          src={douglasPhoto.src}
-          alt="Instructors Photo"
-          width={235}
-          height={248}
-        />
-        <Box
-          display="flex"
-          flexDirection="column"
-          className="mt-[28px] sm:mt-0 ml-0 sm:ml-[28px] items-center sm:items-start"
+            <Title
+              color={titleColor}
+              className="mb-[16px]"
+            >Fabiano De Freitas</Title>
+            <BodyText
+              className="text-center sm:text-start"
+              width="90%"
+            >
+              2nd Degree Black Belt Professor Fabiano de Freitas is the Head Instructor of Gracie Barra North York, Toronto. He was born in Campinas, São Paulo, Brazil.
+              With more than 13 years of teaching experience.
+            </BodyText>
+          </Box>
+        </InstructorContainer>
+        <InstructorContainer
+          className="flex-col sm:flex-row items-center sm:items-start mt-[65px] sm:mt-[28px]]"
         >
-          <Title
-            color={titleColor}
-            className="mb-[16px]"
-          >Douglas Lincoln</Title>
-          <BodyText
-            className="text-center sm:text-start"
-            width="90%"
+          <Image
+            src={douglasPhoto.src}
+            alt="Instructors Photo"
+            width={235}
+            height={248}
+          />
+          <Box
+            display="flex"
+            flexDirection="column"
+            className="mt-[28px] sm:mt-0 ml-0 sm:ml-[28px] items-center sm:items-start"
           >
-            Brown Belt Professor Douglas Lincoln Instructor of Gracie Barra North York, Toronto. He was born in Campinas, São Paulo, Brazil. With more than 8 years of
-            teaching experience.
-          </BodyText>
-        </Box>
-      </InstructorContainer>
-    </Container>
+            <Title
+              color={titleColor}
+              className="mb-[16px]"
+            >Douglas Lincoln</Title>
+            <BodyText
+              className="text-center sm:text-start"
+              width="90%"
+            >
+              Brown Belt Professor Douglas Lincoln Instructor of Gracie Barra North York, Toronto. He was born in Campinas, São Paulo, Brazil. With more than 8 years of
+              teaching experience.
+            </BodyText>
+          </Box>
+        </InstructorContainer>
+      </Container>
+    </>
   )
 }

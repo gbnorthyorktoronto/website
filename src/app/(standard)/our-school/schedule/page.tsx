@@ -22,60 +22,68 @@ const Container = styled(Box)(() => ({
 
 export default function Instructors() {
   return (
-    <Container>
-      <GGrey />
-      <Title
-        className="!mt-[25px] sm:!mt-[128px]"
-        mb={5}
-      >Our weekly schedule</Title>
-      <Image
-        className="hidden sm:block"
-        src={schedule.src}
-        alt="Weekly Schedule"
-        width={1440}
-        height={1000}
-        style={{
-          height: 'auto',
-          maxWidth: '80%',
-          marginBottom: 80,
-        }}
+    <>
+      <title>Schedule | Gracie Barra North York</title>
+      <meta
+        name="description"
+        content="Gracie Barra offer a schedule of classes to fit even the busiest lifestyle and Jiu-Jitsu skill level."
       />
-      <Image
-        className="sm:hidden"
-        src={scheduleMobile1.src}
-        alt="Weekly Schedule"
-        width={1000}
-        height={1000}
-        style={{
-          height: 'auto',
-          maxWidth: '90%',
-          marginBottom: 10,
-        }}
-      />
-      <Image
-        className="sm:hidden"
-        src={scheduleMobile2.src}
-        alt="Weekly Schedule"
-        width={1000}
-        height={1000}
-        style={{
-          height: 'auto',
-          maxWidth: '90%',
-          marginBottom: 10,
-        }}
-      />
-      <Image
-        className="sm:hidden"
-        src={scheduleMobile3.src}
-        alt="Weekly Schedule"
-        width={1000}
-        height={1000}
-        style={{
-          height: 'auto',
-          maxWidth: '90%',
-          marginBottom: 80,
-        }}
-      />
-    </Container>
+
+      <Container>
+        <GGrey />
+        <Title
+          className="!mt-[25px] sm:!mt-[128px]"
+          mb={5}
+        >Our weekly schedule</Title>
+        <Image
+          className="hidden sm:block"
+          src={schedule.src}
+          alt="Weekly Schedule"
+          width={1440}
+          height={1000}
+          style={{
+            height: 'auto',
+            maxWidth: '80%',
+            marginBottom: 80,
+          }}
+        />
+        <Image
+          className="sm:hidden"
+          src={scheduleMobile1.src}
+          alt="Weekly Schedule"
+          width={1000}
+          height={1000}
+          style={{
+            height: 'auto',
+            maxWidth: '90%',
+            marginBottom: 10,
+          }}
+        />
+        <Image
+          className="sm:hidden"
+          src={scheduleMobile2.src}
+          alt="Weekly Schedule"
+          width={1000}
+          height={1000}
+          style={{
+            height: 'auto',
+            maxWidth: '90%',
+            marginBottom: 10,
+          }}
+        />
+        <Image
+          className="sm:hidden"
+          src={scheduleMobile3.src}
+          alt="Weekly Schedule"
+          width={1000}
+          height={1000}
+          style={{
+            height: 'auto',
+            maxWidth: '90%',
+            marginBottom: 80,
+          }}
+        />
+      </Container>
+    </>
   )
 }

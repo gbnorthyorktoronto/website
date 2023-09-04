@@ -24,38 +24,46 @@ const ContentContainer = styled(Box)(() => ({
 
 export default function Contact() {
   return (
-    <Container
-      className="flex-col sm:flex-row sm:px-[80px] sm:justify-center items-center sm:items-start"
-    >
-      <GGrey />
-      <ContentContainer
-        className="items-center	sm:items-start mt-[25px] sm:mt-[128px] sm:mr-[120px] sm:h-[730px]"
+    <>
+      <title>Contact | Gracie Barra North York</title>
+      <meta
+        name="description"
+        content="For any questions regarding Gracie Barra in Brazil, feel free to send us an e-mail."
+      />
+
+      <Container
+        className="flex-col sm:flex-row sm:px-[80px] sm:justify-center items-center sm:items-start"
       >
-        <Title>Contact us today!</Title>
-        <BodyText
-          className="w-11/12 sm:w-[600px] text-center sm:text-start"
-          mt={1}
+        <GGrey />
+        <ContentContainer
+          className="items-center	sm:items-start mt-[25px] sm:mt-[128px] sm:mr-[120px] sm:h-[730px]"
         >
-          Contact us for more information regarding our free class offer or more information about
-          Gracie Barra North York, Toronto. <br /><br className="sm:hidden" />
+          <Title>Contact us today!</Title>
+          <BodyText
+            className="w-11/12 sm:w-[600px] text-center sm:text-start"
+            mt={1}
+          >
+            Contact us for more information regarding our free class offer or more information about
+            Gracie Barra North York, Toronto. <br /><br className="sm:hidden" />
 
-          <b>
-            Location: {gbPublicInfo.address}<br />
-            Phone: {gbPublicInfo.phone} <br />
-            Email: {gbPublicInfo.email}
-          </b>
-        </BodyText>
+            <b>
+              Location: {gbPublicInfo.address}<br />
+              Phone: {gbPublicInfo.phone} <br />
+              Email: {gbPublicInfo.email}
+            </b>
+          </BodyText>
 
-        <Title mt={8}>School Hours of operation:</Title>
-        <BodyText mt={1}><b>Monday:</b> 6:30am - 10:00pm</BodyText>
-        <BodyText mt={1}><b>Tuesday:</b> 6:30am - 10:00pm</BodyText>
-        <BodyText mt={1}><b>Wednesday:</b> 6:30am - 10:00pm</BodyText>
-        <BodyText mt={1}><b>Thursday:</b> 6:30am - 10:00pm</BodyText>
-        <BodyText mt={1}><b>Friday:</b> 6:30am - 10:00pm</BodyText>
-        <BodyText mt={1}><b>Saturday:</b> 11:00am - 3:00pm</BodyText>
-        <BodyText mt={1}><b>Sunday:</b> CLOSED</BodyText>
-      </ContentContainer>
-      <FreeClassForm />
-    </Container>
+          <Title mt={8}>School Hours of operation:</Title>
+          <BodyText mt={1}><b>Monday:</b> 6:30am - 10:00pm</BodyText>
+          <BodyText mt={1}><b>Tuesday:</b> 6:30am - 10:00pm</BodyText>
+          <BodyText mt={1}><b>Wednesday:</b> 6:30am - 10:00pm</BodyText>
+          <BodyText mt={1}><b>Thursday:</b> 6:30am - 10:00pm</BodyText>
+          <BodyText mt={1}><b>Friday:</b> 6:30am - 10:00pm</BodyText>
+          <BodyText mt={1}><b>Saturday:</b> 11:00am - 3:00pm</BodyText>
+          <BodyText mt={1}><b>Sunday:</b> CLOSED</BodyText>
+        </ContentContainer>
+        <FreeClassForm />
+      </Container>
+    </>
   )
 }

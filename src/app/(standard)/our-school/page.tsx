@@ -134,6 +134,12 @@ export default function OurSchool() {
 
   return (
     <>
+      <title>Our School | Gracie Barra North York</title>
+      <meta
+        name="description"
+        content="Gracie Barra School offers a wide range of Jiu-Jitsu classes and martial arts for all ages and abilities, including female only classes."
+      />
+
       <Container
         className="px-[5px] sm:px-[80px] flex-col sm:flex-row items-center sm:items-start"
         textAlign="center"
